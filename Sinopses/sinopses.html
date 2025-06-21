@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Livros Disponíveis</h1>
+    
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Busque por título ou autor..." 
+            onkeyup="filtrarLivros()"
+        >
+        <button class="search-btn">🔍</button>
+    </div>
+
+    <div id="livros-container">
+        <div class="livro" data-titulo="O Pequeno Príncipe" data-autor="Antoine de Saint-Exupéry">
+            <h3>O Pequeno Príncipe</h3>
+            <p>Antoine de Saint-Exupéry</p>
+            <button class="reserve-btn" onclick="redirecionarParaSinopse('pequeno-principe')">Reserve</button>
+        </div>
+
+        <div class="livro" data-titulo="1984" data-autor="George Orwell">
+            <h3>1984</h3>
+            <p>George Orwell</p>
+            <button class="reserve-btn" onclick="redirecionarParaSinopse('1984')">Reserve</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
